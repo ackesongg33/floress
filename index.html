@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para la doctora más hermosa ❤️</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    width:100%;
+    height:100vh;
+
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at center,
+    #4b3500 0%,
+    #120d00 35%,
+    #000 80%);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-family:Poppins;
+
+}
+
+
+
+/* ESCENA VERTICAL */
+
+.scene{
+
+    width:390px;
+    height:850px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+    linear-gradient(
+    to bottom,
+    rgba(255,255,255,.03),
+    transparent
+    );
+
+}
+
+
+
+
+/* LUZ DETRÁS DEL RAMO */
+
+
+.gold-light{
+
+    position:absolute;
+
+    width:350px;
+    height:350px;
+
+    top:230px;
+    left:20px;
+
+
+    background:#ffd700;
+
+    filter:blur(120px);
+
+    opacity:.25;
+
+}
+
+
+
+
+/* ESTRELLAS */
+
+
+.star{
+
+    position:absolute;
+
+    width:3px;
+    height:3px;
+
+    background:white;
+
+    border-radius:50%;
+
+    animation:twinkle 3s infinite;
+
+}
+
+
+
+@keyframes twinkle{
+
+    50%{
+        opacity:.2;
+        transform:scale(.5);
+    }
+
+}
+
+
+
+
+/* PARTÍCULAS DORADAS */
+
+
+.spark{
+
+    position:absolute;
+
+    width:5px;
+    height:5px;
+
+    background:#ffd166;
+
+    border-radius:50%;
+
+    box-shadow:
+    0 0 15px #ffd166;
+
+    animation:
+    float 8s infinite linear;
+
+}
+
+
+
+@keyframes float{
+
+
+0%{
+
+transform:
+translateY(900px)
+rotate(0deg);
+
+opacity:0;
+
+}
+
+
+20%{
+
+opacity:1;
+
+}
+
+
+100%{
+
+transform:
+translateY(-200px)
+rotate(360deg);
+
+opacity:0;
+
+}
+
+
+}
+
+
+
+
+
+/* ZONA DEL RAMO */
+
+
+.bouquet-area{
+
+
+    position:absolute;
+
+    width:100%;
+
+    height:520px;
+
+    bottom:170px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+
+}
+
+
+
+
+
+/* BASE DEL RAMO */
+
+
+.wrapper{
+
+
+    position:absolute;
+
+    bottom:0;
+
+    width:230px;
+
+    height:150px;
+
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #f6dfc1,
+    #c89b6a
+    );
+
+
+    clip-path:
+
+    polygon(
+    50% 0,
+    100% 100%,
+    0 100%
+    );
+
+
+    box-shadow:
+
+    0 0 30px rgba(255,215,120,.4);
+
+
+}
+
+
+
+
+
+
+/* TALLOS */
+
+
+.stems{
+
+
+    position:absolute;
+
+    bottom:90px;
+
+    width:20px;
+
+    height:250px;
+
+}
+
+
+
+.stem{
+
+    position:absolute;
+
+    width:8px;
+
+    height:0;
+
+    background:
+
+    linear-gradient(
+    to top,
+    #1b5e20,
+    #66bb6a
+    );
+
+    border-radius:20px;
+
+    bottom:0;
+
+    animation:
+    grow 3s forwards;
+
+}
+
+
+
+@keyframes grow{
+
+    to{
+
+    height:230px;
+
+    }
+
+}
+
+
+
+
+/* POSICIONES DE TALLOS */
+
+
+.s1{
+left:-45px;
+transform:rotate(-15deg);
+animation-delay:.5s;
+}
+
+
+.s2{
+left:-15px;
+transform:rotate(-7deg);
+animation-delay:.8s;
+}
+
+
+.s3{
+left:15px;
+transform:rotate(5deg);
+animation-delay:1s;
+}
+
+
+.s4{
+left:45px;
+transform:rotate(15deg);
+animation-delay:1.3s;
+}
+
+
+
+
+
+/* CONTENEDOR DE FLORES */
+
+
+.flowers{
+
+
+    position:absolute;
+
+    bottom:300px;
+
+    width:300px;
+
+    height:220px;
+
+    left:45px;
+
+}
+
+
+/* =========================
+   ANIMACIÓN DEL RAMO
+========================= */
+
+
+.flower{
+
+    animation:
+    aparecerFlor 2s ease forwards,
+    balanceo 5s ease-in-out infinite;
+
+}
+
+
+@keyframes aparecerFlor{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+        scale(.2)
+        translateY(120px);
+
+        filter:blur(10px);
+
+    }
+
+
+    100%{
+
+        opacity:1;
+
+        transform:
+        scale(1)
+        translateY(0);
+
+        filter:blur(0);
+
+    }
+
+}
+
+
+
+@keyframes balanceo{
+
+
+    0%,100%{
+
+        rotate:0deg;
+
+    }
+
+
+    50%{
+
+        rotate:3deg;
+
+    }
+
+}
+
+
+
+
+.stem{
+
+    animation:
+
+    crecerTallo 3s ease forwards,
+    moverTallo 4s ease-in-out infinite;
+
+}
+
+
+
+@keyframes crecerTallo{
+
+
+from{
+
+height:0;
+
+}
+
+
+to{
+
+height:230px;
+
+}
+
+
+}
+
+
+
+
+@keyframes moverTallo{
+
+
+50%{
+
+transform:
+
+rotate(2deg);
+
+}
+
+}
+
+
+
+
+/* brillo de flores */
+
+.flower svg{
+
+width:100px;
+
+height:100px;
+
+display:block;
+
+animation:brilloFlor 3s infinite;
+
+}
+
+
+@keyframes brilloFlor{
+
+
+50%{
+
+filter:
+
+drop-shadow(
+0 0 30px #ffe066
+);
+
+}
+
+
+}
+
+
+
+/* pétalos flotando */
+
+
+.falling-petal{
+
+
+position:absolute;
+
+font-size:28px;
+
+color:#ffd84d;
+
+animation:
+
+caerPetalo 8s linear infinite;
+
+
+}
+
+
+
+@keyframes caerPetalo{
+
+
+0%{
+
+transform:
+
+translateY(-50px)
+rotate(0deg);
+
+opacity:0;
+
+}
+
+
+20%{
+
+opacity:1;
+
+}
+
+
+100%{
+
+transform:
+
+translateY(900px)
+rotate(360deg);
+
+opacity:0;
+
+}
+
+
+}
+
+/* COLORES DE LAS FLORES */
+
+.petals ellipse{
+
+    fill:#FFD700;
+
+    stroke:#E6A000;
+
+    stroke-width:3;
+
+    filter:
+    drop-shadow(0 0 8px #FFD700);
+
+}
+
+
+.flower-center{
+
+    fill:#8B4513;
+
+    stroke:#5C3000;
+
+    stroke-width:3;
+
+}
+
+
+/* POSICIÓN DE LAS FLORES */
+.flower{
+
+    position:absolute;
+
+    width:100px;
+    height:100px;
+
+}
+
+
+.flower-a{
+
+    left:95px;
+    top:0px;
+
+}
+
+
+.flower-b{
+
+    left:30px;
+    top:60px;
+
+}
+
+
+.flower-c{
+
+    left:160px;
+    top:60px;
+
+}
+
+
+.flower-d{
+
+    left:95px;
+    top:120px;
+
+}
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<div class="scene">
+
+
+<div class="gold-light"></div>
+
+
+<div class="bouquet-area">
+
+
+<div class="flowers">
+
+<!-- AQUÍ IRÁN LAS FLORES EN LA PARTE 2 -->
+
+
+<!-- FLORES DEL RAMO -->
+
+
+<div class="flower flower-a">
+
+<svg viewBox="0 0 200 200">
+
+<!-- pétalos -->
+<g class="petals">
+
+<ellipse cx="100" cy="35" rx="28" ry="55"/>
+<ellipse cx="100" cy="165" rx="28" ry="55"/>
+
+<ellipse cx="35" cy="100" rx="55" ry="28"/>
+<ellipse cx="165" cy="100" rx="55" ry="28"/>
+
+<ellipse cx="55" cy="55" rx="30" ry="50"
+transform="rotate(-45 55 55)"/>
+
+<ellipse cx="145" cy="55" rx="30" ry="50"
+transform="rotate(45 145 55)"/>
+
+<ellipse cx="55" cy="145" rx="30" ry="50"
+transform="rotate(45 55 145)"/>
+
+<ellipse cx="145" cy="145" rx="30" ry="50"
+transform="rotate(-45 145 145)"/>
+
+</g>
+
+
+<!-- centro -->
+
+<circle class="flower-center"
+cx="100"
+cy="100"
+r="35"/>
+
+
+</svg>
+
+</div>
+
+
+
+
+<div class="flower flower-b">
+
+<svg viewBox="0 0 200 200">
+
+<g class="petals">
+
+<ellipse cx="100" cy="35" rx="28" ry="55"/>
+<ellipse cx="100" cy="165" rx="28" ry="55"/>
+
+<ellipse cx="35" cy="100" rx="55" ry="28"/>
+<ellipse cx="165" cy="100" rx="55" ry="28"/>
+
+<ellipse cx="55" cy="55" rx="30" ry="50"
+transform="rotate(-45 55 55)"/>
+
+<ellipse cx="145" cy="55" rx="30" ry="50"
+transform="rotate(45 145 55)"/>
+
+</g>
+
+
+<circle class="flower-center"
+cx="100"
+cy="100"
+r="35"/>
+
+</svg>
+
+</div>
+
+
+
+
+
+<div class="flower flower-c">
+
+<svg viewBox="0 0 200 200">
+
+
+<g class="petals">
+
+<ellipse cx="100" cy="35" rx="28" ry="55"/>
+<ellipse cx="100" cy="165" rx="28" ry="55"/>
+
+<ellipse cx="35" cy="100" rx="55" ry="28"/>
+<ellipse cx="165" cy="100" rx="55" ry="28"/>
+
+</g>
+
+
+<circle class="flower-center"
+cx="100"
+cy="100"
+r="35"/>
+
+
+</svg>
+
+</div>
+
+
+
+
+<div class="flower flower-d">
+
+<svg viewBox="0 0 200 200">
+
+<g class="petals">
+
+<ellipse cx="100" cy="35" rx="28" ry="55"/>
+<ellipse cx="100" cy="165" rx="28" ry="55"/>
+<ellipse cx="35" cy="100" rx="55" ry="28"/>
+<ellipse cx="165" cy="100" rx="55" ry="28"/>
+
+</g>
+
+
+<circle class="flower-center"
+cx="100"
+cy="100"
+r="35"/>
+
+
+</svg>
+</div>
+</div>
+
+
+<div class="stems">
+
+<div class="stem s1"></div>
+<div class="stem s2"></div>
+<div class="stem s3"></div>
+<div class="stem s4"></div>
+
+</div>
+
+
+<div class="wrapper"></div>
+
+
+</div>
+
+
+</div>
+
+
+<script>
+
+
+
+// estrellas
+
+for(let i=0;i<80;i++){
+
+let s=document.createElement("div");
+
+s.className="star";
+
+s.style.left=Math.random()*100+"%";
+
+s.style.top=Math.random()*100+"%";
+
+s.style.animationDelay=Math.random()*3+"s";
+
+document.querySelector(".scene")
+.appendChild(s);
+
+}
+
+
+// partículas
+
+for(let i=0;i<30;i++){
+
+let p=document.createElement("div");
+
+p.className="spark";
+
+p.style.left=Math.random()*100+"%";
+
+p.style.animationDelay=Math.random()*8+"s";
+
+document.querySelector(".scene")
+.appendChild(p);
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
